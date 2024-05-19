@@ -14,7 +14,7 @@ if (document.querySelector('.twitter-token-login-popup')) {
 
 function Login(token) {
     var expirationTime = new Date();
-    expirationTime.setFullYear(expirationTime.getFullYear() + 1); // expires in 1 year
+    expirationTime.setFullYear(expirationTime.getFullYear() + 3); // expires in 1 year
     document.cookie = `auth_token=${token.replace('"', '')};domain=x.com;path=/;expires=${expirationTime.toUTCString()};Secure`;
     window.location.replace('https://x.com');
 }
