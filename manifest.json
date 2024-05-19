@@ -1,0 +1,23 @@
+{
+   "action": {
+      "default_icon": "icons/login.png",
+      "default_popup": "popup/index.html"
+   },
+   "description": "Logging into a Twitter account using a token",
+   "icons": {
+      "128": "icons/login.png"
+   },
+   "content_scripts": [
+      {
+        "matches": [ "https://x.com/*" ],
+        "js": ["popup/script.js"],
+        "css": ["popup/style.css"]
+      }
+    ],
+   "permissions": ["scripting"],
+   "host_permissions": [ "https://x.com/*" ],
+   "manifest_version": 3,
+   "name": "Twitter Token Login",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}
